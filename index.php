@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Home</title>
+    <title>Top 2000 - Home</title>
     <meta charset="utf-8">
     <meta name="author" content="Teun Kleine & Lucas Reiff">
     <meta name="keywords" content="template,HTML,metatags">
@@ -25,7 +25,7 @@
     <main class="home-grid">
 
         <section class="text-section">
-            <h1>Welkom op Music Platform</h1>
+            <h1>Welkom bij de Top 2000</h1>
 
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -50,9 +50,7 @@
 
         <section class="music-icons">
 
-            <div class="note">♪</div>
-            <div class="note">♫</div>
-            <div class="note">♩</div>
+            <img src="images/homepaginaafbeelding.webp" width="500" height="600">
 
         </section>
 

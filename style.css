@@ -2,18 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e9e9e9;
-    color: #111111;
+    background-color: #fd9c9c;
+    color: #000000;
 }
 
 /* ===== NAVIGATIE ===== */
 
 header {
-    background-color: #1f7ae0;
+    background-color: #c50606;
     padding: 20px;
 }
 
@@ -21,8 +22,8 @@ header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     list-style: none;
-    background-color: #ffffff;
-    border: 2px solid #111111;
+    background-color: #fd9c9c;
+    border: 2px solid #420303;
 }
 
 .nav-list li {
@@ -45,7 +46,7 @@ header {
 .nav-list a:hover,
 .nav-list .active {
     font-weight: bold;
-    background-color: #dcdcdc;
+    background-color: #970000;
 }
 
 /* ===== HOME ===== */
@@ -93,7 +94,7 @@ header {
     gap: 20px;
     padding: 15px;
     border: 2px solid #111111;
-    background-color: #ffffff;
+    background-color: #111111;
 }
 
 .song-item button {
@@ -104,7 +105,7 @@ header {
 }
 
 .single-detail {
-    background-color: #ffffff;
+    background-color: #111111;
     border: 2px solid #111111;
     padding: 20px;
 }
@@ -124,7 +125,7 @@ header {
 }
 
 .artist-card {
-    background-color: #ffffff;
+    background-color: #111111;
     border: 2px solid #111111;
     padding: 20px;
     text-align: center;
@@ -144,7 +145,7 @@ header {
 .search-box {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #111111;
     border: 2px solid #111111;
     padding: 40px;
     text-align: center;
@@ -175,7 +176,7 @@ header {
 .contact-info {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #111111;
     border: 2px solid #111111;
     padding: 40px;
 }

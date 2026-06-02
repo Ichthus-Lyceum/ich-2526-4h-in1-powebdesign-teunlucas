@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Artiesten</title>
+    <title>Top 2000 - Artiesten</title>
     <meta charset="utf-8">
     <meta name="author" content="Teun Kleine & Lucas Reiff">
     <meta name="keywords" content="template,HTML,metatags">
