@@ -50,7 +50,7 @@
 
         <section class="music-icons">
 
-            <img src="images/homepaginaafbeelding.webp" width="500" height="600">
+            <img src="img/homepaginaafbeelding.webp" width="500" height="600">
 
         </section>
 
