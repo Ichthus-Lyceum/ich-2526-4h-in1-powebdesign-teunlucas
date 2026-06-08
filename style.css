@@ -1,17 +1,25 @@
+/* =========================
+   RESET / BASIS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #fd9c9c;
-    color: #000000;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* ===== NAVIGATIE ===== */
+/* =========================
+   HEADER / NAV
+========================= */
 
 header {
     background-color: #c50606;
@@ -23,11 +31,11 @@ header {
     grid-template-columns: repeat(5, 1fr);
     list-style: none;
     background-color: #fd9c9c;
-    border: 2px solid #420303;
+    border: 2px solid #111;
 }
 
 .nav-list li {
-    border-right: 2px solid #111111;
+    border-right: 2px solid #111;
 }
 
 .nav-list li:last-child {
@@ -36,172 +44,226 @@ header {
 
 .nav-list a {
     display: block;
-    padding: 20px;
     text-align: center;
+    padding: 15px;
     text-decoration: none;
-    color: #111111;
-    font-size: 1.2rem;
+    color: #111;
+    font-size: 1.1rem;
 }
 
 .nav-list a:hover,
 .nav-list .active {
-    font-weight: bold;
     background-color: #64c846;
+    font-weight: bold;
 }
 
-/* ===== HOME ===== */
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+/* =========================
+   HOME
+========================= */
 
 .home-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;
-    padding: 40px;
+    align-items: center;
 }
 
 .text-section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .music-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    font-size: 6rem;
 }
 
-/* ===== SINGLES ===== */
+/* =========================
+   SINGLES
+========================= */
 
-.singles-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    padding: 40px;
-}
-
-.song-list {
+.results-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .song-item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
+    display: flex;
     align-items: center;
     gap: 20px;
+
     padding: 15px;
-    border: 2px solid #111111;
-    background-color: #111111;
+
+    background-color: #111;
+    color: white;
+
+    border: 2px solid #111;
 }
 
 .song-item button {
     width: 50px;
     height: 50px;
-    font-size: 1rem;
     cursor: pointer;
 }
 
+/* detail box (optioneel aside) */
+
 .single-detail {
-    background-color: #111111;
-    border: 2px solid #111111;
+    margin-top: 30px;
+    background-color: #111;
+    color: white;
     padding: 20px;
 }
 
-.single-detail img {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-/* ===== ARTIESTEN ===== */
+/* =========================
+   ARTIESTEN
+========================= */
 
 .artist-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
-    padding: 40px;
 }
 
 .artist-card {
-    background-color: #111111;
-    border: 2px solid #111111;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
     padding: 20px;
-    text-align: center;
+
+    background-color: #111;
+    color: white;
+
+    border: 2px solid #111;
 }
 
 .artist-card img {
     width: 100%;
-    margin-bottom: 15px;
+    height: auto;
 }
 
-/* ===== SEARCH ===== */
+/* =========================
+   SEARCH
+========================= */
 
 .search-page {
-    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto;
-    background-color: #111111;
-    border: 2px solid #111111;
+
     padding: 40px;
-    text-align: center;
+
+    background-color: #111;
+    color: white;
+
+    border: 2px solid #111;
 }
 
 .search-box img {
-    width: 100px;
-    margin-bottom: 20px;
+    width: 80px;
+    align-self: center;
 }
 
 .search-box form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .search-box input {
-    padding: 15px;
+    padding: 12px;
     font-size: 1rem;
 }
 
-/* ===== CONTACT ===== */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-page {
-    padding: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-info {
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto;
-    background-color: #111111;
-    border: 2px solid #111111;
+
     padding: 40px;
+
+    background-color: #111;
+    color: white;
+
+    border: 2px solid #111;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.contact-info h1 {
-    margin-bottom: 20px;
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 30px;
 }
 
-.contact-info p {
-    margin-bottom: 15px;
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    text-decoration: none;
+
+    background-color: white;
+    color: black;
+
+    border: 2px solid #111;
 }
 
-/* ===== RESPONSIVE ===== */
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.active-page {
+    background-color: #64c846 !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
-
-    .home-grid,
-    .singles-grid,
-    .artist-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .artist-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .nav-list {
         grid-template-columns: 1fr;
@@ -209,10 +271,18 @@ header {
 
     .nav-list li {
         border-right: none;
-        border-bottom: 2px solid #111111;
+        border-bottom: 2px solid #111;
     }
 
     .nav-list li:last-child {
         border-bottom: none;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-grid {
+        grid-template-columns: 1fr;
     }
 }

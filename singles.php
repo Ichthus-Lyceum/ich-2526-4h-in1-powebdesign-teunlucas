@@ -1,72 +1,85 @@
+<?php
+
+$per_page = 100;
+$total_singles = 2000;
+
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+if ($page < 1) {
+    $page = 1;
+}
+
+$total_pages = ceil($total_singles / $per_page);
+
+$start = (($page - 1) * $per_page) + 1;
+$end = min($start + $per_page - 1, $total_singles);
+
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Top 2000 - Singles</title>
     <meta charset="utf-8">
     <meta name="author" content="Teun Kleine & Lucas Reiff">
-    <meta name="keywords" content="template,HTML,metatags">
-    <meta name="description" content="Dit is de HTML5 template voor iedere pagina">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Top 2000 Singles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 2000 - Singles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="index.php">Home</a></li>
-                <li><a class="active" href="singles.php">Singles</a></li>
-                <li><a href="artiesten.php">Artiesten</a></li>
-                <li><a href="search.php">Search</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.php">Home</a></li>
+            <li><a class="active" href="singles.php">Singles</a></li>
+            <li><a href="artiesten.php">Artiesten</a></li>
+            <li><a href="search.php">Search</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main class="singles-grid">
+<main class="content-grid">
 
-        <section class="song-list">
+    <section class="results-grid">
 
-            <article class="song-item">
-                <button>▶</button>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </article>
+        <?php for ($i = $start; $i <= $end; $i++) : ?>
 
             <article class="song-item">
-                <button>▶</button>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+                <button type="button">▶</button>
+
+                <div>
+                    <h2>Single <?= $i; ?></h2>
+                    <p>Artiest <?= $i; ?></p>
+                </div>
+
             </article>
 
-            <article class="song-item">
-                <button>▶</button>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </article>
+        <?php endfor; ?>
 
-            <article class="song-item">
-                <button>▶</button>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </article>
+    </section>
 
-            <article class="song-item">
-                <button>▶</button>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </article>
+</main>
 
-        </section>
+<footer>
 
-        <aside class="single-detail">
+    <div class="pagination">
 
-            <img src="img/single.jpg" alt="Single cover">
+        <?php for ($i = 1; $i <= $total_pages; $i++) : ?>
 
-            <h2>Single Titel</h2>
+            <a
+                class="<?= ($i === $page) ? 'active-page' : ''; ?>"
+                href="singles.php?page=<?= $i; ?>">
+                <?= $i; ?>
+            </a>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eaque, dicta.
-            </p>
+        <?php endfor; ?>
 
-        </aside>
+    </div>
 
-    </main>
+</footer>
 
 </body>
 </html>

@@ -1,58 +1,88 @@
+<?php
+
+$per_page = 100;
+$total_artists = 2000;
+
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+if ($page < 1) {
+    $page = 1;
+}
+
+$total_pages = ceil($total_artists / $per_page);
+
+$start = (($page - 1) * $per_page) + 1;
+$end = min($start + $per_page - 1, $total_artists);
+
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Top 2000 - Artiesten</title>
     <meta charset="utf-8">
     <meta name="author" content="Teun Kleine & Lucas Reiff">
-    <meta name="keywords" content="template,HTML,metatags">
-    <meta name="description" content="Dit is de HTML5 template voor iedere pagina">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Top 2000 Artiesten">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 2000 - Artiesten</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="singles.php">Singles</a></li>
-                <li><a class="active" href="artiesten.php">Artiesten</a></li>
-                <li><a href="search.php">Search</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="singles.php">Singles</a></li>
+            <li><a class="active" href="artiesten.php">Artiesten</a></li>
+            <li><a href="search.php">Search</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
+<main class="content-grid">
 
-        <section class="artist-grid">
+    <section class="artist-grid">
 
-            <article class="artist-card">
-                <img src="img/artist1.jpg" alt="Artiest 1">
-                <h2>Artiest 1</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </article>
+        <?php for ($i = $start; $i <= $end; $i++) : ?>
 
             <article class="artist-card">
-                <img src="img/artist2.jpg" alt="Artiest 2">
-                <h2>Artiest 2</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
+
+                <img
+                    src="img/artist-placeholder.jpg"
+                    alt="Artiest <?= $i; ?>">
+
+                <h2>Artiest <?= $i; ?></h2>
+
+                <p>
+                    Beschrijving van artiest <?= $i; ?>
+                </p>
+
             </article>
 
-            <article class="artist-card">
-                <img src="img/artist3.jpg" alt="Artiest 3">
-                <h2>Artiest 3</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </article>
+        <?php endfor; ?>
 
-            <article class="artist-card">
-                <img src="img/artist4.jpg" alt="Artiest 4">
-                <h2>Artiest 4</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </article>
+    </section>
 
-        </section>
+</main>
 
-    </main>
+<footer>
+
+    <div class="pagination">
+
+        <?php for ($i = 1; $i <= $total_pages; $i++) : ?>
+
+            <a
+                class="<?= ($i === $page) ? 'active-page' : ''; ?>"
+                href="artiesten.php?page=<?= $i; ?>">
+                <?= $i; ?>
+            </a>
+
+        <?php endfor; ?>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
