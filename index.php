@@ -28,20 +28,13 @@
             <h1>Welkom bij de Top 2000</h1>
 
             <p>
-Welkom op hét platform voor liefhebbers van de Top 2000. Hier ontdek je de grootste nummers ooit gemaakt — van tijdloze klassiekers tot moderne hits die niet meer weg te denken zijn uit de lijst.
+                Welkom op hét platform voor liefhebbers van de Top 2000. Hier ontdek je de grootste nummers ooit gemaakt — van tijdloze klassiekers tot moderne hits die niet meer weg te denken zijn uit de lijst.
             </p>
 
             <p>
-Blader door de complete Top 2000, zoek jouw favoriete artiesten en ontdek welke nummers jaar na jaar populair blijven. Of je nu benieuwd bent naar de hoogste noteringen, iconische songs uit het verleden of verrassende stijgers: je vindt het hier allemaal overzichtelijk bij elkaar.
+                Blader door de complete Top 2000, zoek jouw favoriete artiesten en ontdek welke nummers jaar na jaar populair blijven. Of je nu benieuwd bent naar de hoogste noteringen, iconische songs uit het verleden of verrassende stijgers: je vindt het hier allemaal overzichtelijk bij elkaar.
             </p>
 
-            <p>
-
-            </p>
-
-            <p>
-
-            </p>
         </section>
 
         <section class="music-icons">
