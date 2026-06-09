@@ -26,7 +26,7 @@
 
         <section class="search-box">
 
-            <img src="img/search-icon.png" alt="Zoek icoon">
+            <img src="img/searchicon.webp" alt="Zoek icoon">
 
             <form>
                 <label for="search">Zoeken</label>
