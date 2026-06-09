@@ -24,7 +24,7 @@
 
     <main class="search-page">
 
-        <section class="search-box">
+        <div class="search-box">
 
             <img src="img/searchicon.webp" alt="Zoek icoon">
 
@@ -39,7 +39,7 @@
                 >
             </form>
 
-        </section>
+        </div>
 
     </main>
 

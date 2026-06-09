@@ -37,12 +37,11 @@
 
         </section>
 
-        <section class="music-icons">
+        <div class="images">
 
-            <img src="img/homepaginaafbeelding.webp" width="500" height="600">
+            <img src="img/homepaginaafbeelding.webp" width="500" height="600" alt="Afbeelding van de Top 2000 thuispagina">
 
-        </section>
-
+        </div>
     </main>
 
 </body>
