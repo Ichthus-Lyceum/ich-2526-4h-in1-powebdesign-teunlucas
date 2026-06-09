@@ -48,16 +48,20 @@ $end = min($start + $per_page - 1, $total_singles);
 
             <?php $artist_number = rand(1, 2000); ?>
 
-            <article class="song-item">
+                <article class="song-item">
 
-                <button type="button">▶</button>
+                    <button type="button" onclick="togglePlay(this)">
+                        ▶
+                    </button>
 
-                <div>
-                    <h2>Single #<?= $i; ?></h2>
-                    <p>Artiest #<?= $artist_number; ?></p>
-                </div>
+                    <div>
+                        <h2>Single #<?= $i; ?></h2>
+                        <p>Artiest #<?= $artist_number; ?></p>
 
-            </article>
+                        <audio class="audio-player" src="aud/bohemianrhapsody.mp3"></audio>
+                    </div>
+
+                </article>
 
         <?php endfor; ?>
 
@@ -82,6 +86,30 @@ $end = min($start + $per_page - 1, $total_singles);
     </div>
 
 </footer>
+
+<script>
+function togglePlay(button) {
+
+    const item = button.closest(".song-item");
+    const audio = item.querySelector(".audio-player");
+
+    // pauze alle andere audio's
+    document.querySelectorAll(".audio-player").forEach(a => {
+        if (a !== audio) {
+            a.pause();
+            a.currentTime = 0;
+        }
+    });
+
+    if (audio.paused) {
+        audio.play();
+        button.textContent = "⏸";
+    } else {
+        audio.pause();
+        button.textContent = "▶";
+    }
+}
+</script>
 
 </body>
 </html>
