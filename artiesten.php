@@ -26,7 +26,7 @@ $end = min($start + $per_page - 1, $total_artists);
     <title>Top 2000 - Artiesten</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="page">
 
 <header>
     <nav>

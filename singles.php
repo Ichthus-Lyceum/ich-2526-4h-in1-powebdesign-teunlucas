@@ -26,7 +26,7 @@ $end = min($start + $per_page - 1, $total_singles);
     <title>Top 2000 - Singles</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="page">
 
 <header>
     <nav>

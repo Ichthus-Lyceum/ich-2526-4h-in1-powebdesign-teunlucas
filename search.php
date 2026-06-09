@@ -8,7 +8,7 @@
     <meta name="description" content="Dit is de HTML5 template voor iedere pagina">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body id="page">
 
     <header>
         <nav>
