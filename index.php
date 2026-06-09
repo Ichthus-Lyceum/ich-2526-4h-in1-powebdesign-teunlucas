@@ -28,23 +28,19 @@
             <h1>Welkom bij de Top 2000</h1>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus doloremque exercitationem molestiae.
+Welkom op hét platform voor liefhebbers van de Top 2000. Hier ontdek je de grootste nummers ooit gemaakt — van tijdloze klassiekers tot moderne hits die niet meer weg te denken zijn uit de lijst.
             </p>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, aspernatur.
+Blader door de complete Top 2000, zoek jouw favoriete artiesten en ontdek welke nummers jaar na jaar populair blijven. Of je nu benieuwd bent naar de hoogste noteringen, iconische songs uit het verleden of verrassende stijgers: je vindt het hier allemaal overzichtelijk bij elkaar.
             </p>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque, cupiditate.
+
             </p>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Facilis, tempora.
+
             </p>
         </section>
 
