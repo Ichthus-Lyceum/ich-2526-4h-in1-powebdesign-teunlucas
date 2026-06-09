@@ -49,13 +49,13 @@ $end = min($start + $per_page - 1, $total_artists);
             <article class="artist-card">
 
                 <img
-                    src="img/artist-placeholder.jpg"
+                    src="img/artistimage.webp"
                     alt="Artiest <?= $i; ?>">
 
-                <h2>Artiest <?= $i; ?></h2>
+                <h2>Artiest #<?= $i; ?></h2>
 
                 <p>
-                    Beschrijving van artiest <?= $i; ?>
+                    Deze artiest was in "..." geboren, en heeft "..." singles!
                 </p>
 
             </article>

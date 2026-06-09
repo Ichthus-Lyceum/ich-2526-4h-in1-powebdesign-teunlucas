@@ -46,13 +46,15 @@ $end = min($start + $per_page - 1, $total_singles);
 
         <?php for ($i = $start; $i <= $end; $i++) : ?>
 
+            <?php $artist_number = rand(1, 2000); ?>
+
             <article class="song-item">
 
                 <button type="button">▶</button>
 
                 <div>
-                    <h2>Single <?= $i; ?></h2>
-                    <p>Artiest <?= $i; ?></p>
+                    <h2>Single #<?= $i; ?></h2>
+                    <p>Artiest #<?= $artist_number; ?></p>
                 </div>
 
             </article>
